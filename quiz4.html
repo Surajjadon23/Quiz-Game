@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="veiwport" content="width=device-width, initial-scale=1.0  ">
+        <link rel="stylesheet" href="quizstyle.css">
+    </head>
+    <body>
+        <div class="homebox custombox ">
+            <h3>Instructions:</h3>
+            <p>Total Number of questions:<span class="total-ques">15</span></p>
+            <button class="button" type="button" onclick="startQuiz()">Start Test</button>
+        </div>
+        <div class="questionbox custombox hide">
+            <div class="qno">
+            </div>
+            <div class="questiontext">
+               <!-- hii-->
+            </div>
+            <div class="optionslist">
+            </div>
+            <div class="nextbutton">
+                <button type="button" class="button" onclick="next()">Next</button>
+            </div>
+            <div class="answershow">
+            </div>
+        </div>
+        <div class="resultbox custombox hide">
+            <h1>Test Result</h1>
+            <table  >
+                <tr>
+                    <td>Total Questions</td>
+                    <td><span class="total-questions"></span></td>
+                </tr>
+                <tr>
+                    <td>Total Attempt</td>
+                    <td><span class="total-attempt"></span></td>
+                </tr>
+                <tr>
+                    <td>Correct</td>
+                    <td><span class="total-correct"></span></td>
+                </tr>
+                <tr>
+                    <td>Wrong</td>
+                    <td><span class="total-wrong"></span></td>
+                </tr>
+                <tr>
+                    <td>Percentage</td>
+                    <td><span class="percentage"></span></td>
+                </tr>
+                <tr> 
+                    <td>Your Total Score is </td>
+                    <td><span class="total-marks"></span></td>
+                </tr>
+            </table>
+            <button type="button" class="button" onclick="goToHome()">Go to Home</button>
+        </div>
+        <script src="quiz4ques.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>

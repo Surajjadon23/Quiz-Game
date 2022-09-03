@@ -1,0 +1,69 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image:url(https://wallpaperaccess.com/full/1176274.jpg);
+}
+.container1{
+  position: relative;
+  width: 1200px;
+  height: 300px;
+  margin: 200px auto;
+  margin-bottom: 20px;
+ 
+}
+.container1 .box{
+  position: relative;
+  width: calc(400px - 30px);
+  height: calc(300px - 30px);
+  background:orangered;
+  float: left;
+  margin: 15px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 10px;
+  text-align: center;
+  padding-top: 90px;
+}
+.container1 .box a{
+  padding-top: 20px;
+  font-size: 60px;
+  color: white;
+  text-decoration: none;
+}
+.container1 .box a:hover{
+  background-color: red;
+  color: aliceblue;
+}
+ 
+.container2{
+ position: relative;
+  width: 1200px;
+  height: 300px;
+  margin: 60px auto;
+  margin-bottom: 20px;
+  align-items: center;
+ 
+}
+.container2 .box{
+  position: relative;
+  width: calc(400px - 30px);
+  height: calc(300px - 30px);
+  background:orangered;
+  float: left;
+  margin: 15px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 10px;
+  padding-top: 90px;
+  text-align: center;
+}
+.container2 .box a{
+  padding-top: 20px;
+  font-size: 60px;
+  color: white;
+  text-decoration: none;
+}
+.container2 .box a:hover{
+  background-color: red;
+  color: aliceblue;
+}

@@ -1,0 +1,213 @@
+body{
+    margin: 0;
+    font-size: 16px;
+    background-color:cornflowerblue;
+    font-weight: 400;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+.custombox{
+    max-width: 700px;
+    background-color: #ffffff;
+    margin: 60px auto;
+    padding: 30px;
+    border-radius: 10px;
+    animation: fadeInRight 1s ease;
+}
+@keyframes fadeInRight{
+    0%{
+        transform: translateX(200px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+.custombox::before,
+.custombox::after{
+    content: '';
+    clear: both;
+    display: table;
+}
+.custombox.hide{
+    display: none;
+}
+.questionbox.hide{
+    display: none;
+}
+ 
+.homebox h3{
+    font-size: 25px;
+    color: #000000;
+    font-weight: 500;
+    margin-bottom: 15px;
+    line-height: 25px;
+}
+.homebox p{
+    font-size: 17px;
+    margin-bottom: 10px;
+    line-height: 25px;
+    color: #000000;
+    font-weight: 400;
+}
+.button{
+    padding: 15px 45px;
+    border-radius: 7px;
+    border: none;
+    color: #000000;
+    background-color:cornflowerblue;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    display: inlincustombox;
+}
+.questionbox .qno,
+.questionbox .questiontext,
+.questionbox .optionslist,
+.questionbox .nextbutton,
+.questionbox .answershow{
+    width: 100%;
+    float: left;
+}
+.questionbox .qno{
+    font-size: 25px;
+    color: black;
+    font-weight: 600;
+    border-bottom: 2px solid #cccccc;
+    padding-bottom: 10px ;
+    line-height: 25px;
+}
+.questionbox .questiontext{
+    font-size: 22px;
+    color: #000000;
+    line-height: 35px;
+    font-weight: 400;
+    padding: 20px 0px;
+    margin: 0;
+}
+.questionbox .optionslist .choice{
+    background-color: #cccccc;
+    padding: 13px 15px;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000000;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    text-transform: capitalize;
+    opacity: 0;
+    animation: fadeIn 0.3s ease forwards;
+    position: relative;
+    overflow: hidden;
+}
+ 
+.questionbox .optionslist .choice.already-answered{
+    pointer-events: none;
+}
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+ 
+.questionbox .optionslist .choice.correct::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: green;
+    z-index: -1;
+    animation: slideInLeft 0.5s ease forwards;
+}
+@keyframes slideInLeft {
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+.questionbox .optionslist .choice.wrong::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color:red;
+    z-index: -1;
+    animation: slideInLeft 0.5s ease forwards;
+}
+.questionbox .optionslist .choice.wrong{
+    color: #ffffff;
+}
+.questionbox .optionslist .choice.correct{
+    color: #ffffff;
+}
+.questionbox .button{
+    margin: 15px 0;
+    color: #cccccc;
+}
+.questionbox .answershow {
+    border-top:1px solid #cccccc;
+}
+.questionbox .answershow div{
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    background-color: #cccccc;
+    border-radius: 20px;
+    margin-right: 3px;
+    margin-top: 15px;
+}
+.questionbox .answershow div.correct{
+    background-color: green;
+    background-image: url(https://www.pngfind.com/pngs/m/174-1740965_7-photos-of-black-and-white-check-mark.png);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.questionbox .answershow div.wrong{
+    background-color:red ;
+    background-image: url(https://toppng.com/uploads/preview/wrong-cross-symbol-11562969015bvubqupjq3.png);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.resultbox{
+    text-align: center;
+}
+ 
+.resultbox.hide{
+    display: none;
+}
+.resultbox h1{
+    font-size: 36px; 
+    line-height: 42px;
+    color: black;
+}
+.resultbox table{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+}
+.resultbox table td{
+    border: 1px solid#cccccc;
+    padding: 8px 15px;
+    font-weight: 500;
+    color: #000000;
+    width: 50%;
+}
+.resultbox .button{
+    margin-right: 20px;
+}
